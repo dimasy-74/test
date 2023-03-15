@@ -14,9 +14,8 @@ on:
     - master
 
 jobs:
-run-name: test
+ test:
 
-    
     runs-on: ubuntu-latest
     
     steps:
