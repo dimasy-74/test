@@ -14,8 +14,9 @@ on:
     - master
 
 jobs:
-    my-ci:
+  my-ci:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Git clone our report
         uses: actions/checkout@v1
