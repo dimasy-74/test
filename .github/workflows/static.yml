@@ -14,7 +14,7 @@ on:
     - master
 
 jobs:
- test:
+  my_ci_part:
     runs-on: ubuntu-latest
     
     steps:
