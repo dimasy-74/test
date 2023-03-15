@@ -1,0 +1,25 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: CI-CD
+env:
+EB_PACAGE_S3_BACET_NAME: _____________
+EB_APLICATIONN_NAME    : ____________
+EB_ENVIROMENT_NAME     : ________
+DEPLOY_PACAGE_NAME     : "flask_app ${{githab.sha}}.zip"
+AWS_REGION_NAME        : "us-west-2"
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: 
+    - master
+
+jobs:
+  my_ci_part:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git clone our report
+        uses: actions/checkout@v1
+
+      - name: Cread ZIP
+        run: zip -r ${{env.DEPLOY_PACAGE_NAME}} ./ -x *.git*
